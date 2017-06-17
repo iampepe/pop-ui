@@ -22,8 +22,8 @@ atom-pane {
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -31,10 +31,10 @@ atom-pane {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: @background-color-highlight;
+    background-color: fade(@background-color-highlight,80%);
 
     &:hover {
-      background-color: @background-color-selected;
+      background-color: fade(@background-color-selected,80%);
     }
 }
 
