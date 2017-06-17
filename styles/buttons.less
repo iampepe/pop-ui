@@ -6,38 +6,59 @@
 
 
 .btn {
-  color: lighten(@text-color, 6%);
+  color: @text-color-info;
+  font-weight: bold;
   background-color: @button-background-color;
   &:hover,
   &:focus {
-    color: @text-color-highlight;
+    color: @text-color-info;
     background-color: @button-background-color-hover;
   }
   &:active {
-    color: fade(@text-color-selected, 66%);
-    background-color: darken(@button-background-color, 2%);
+    color: @text-color-info;
+    background-color: @button-background-color-active;
   }
   &.selected {
-    color: @text-color-selected;
-    background-color: @button-background-color-selected;
+    color: fade(@text-color-selected,80%);
+    background-color: @text-color-info;
+
+    &:hover,
+    &:focus {
+      background-color: lighten(@text-color-info,10%);
+    }
   }
   &:focus,
   &:focus:active {
     outline: none;
+  }
+
+  &.disabled{
+    color: lighten(@background-color-highlight,10%);
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+    &:active {
+      background-color: transparent;
+    }
+    &.selected {
+      background-color: transparent;
+    }
   }
 }
 
 
 // Colored buttons -----------------------
 
-.btn.btn-primary { .btn-color(@background-color-info); }
+.btn.btn-primary { .btn-color(@base-accent-color); }
 .btn.btn-info    { .btn-color(@background-color-info); }
 .btn.btn-success { .btn-color(@background-color-success); }
 .btn.btn-warning { .btn-color(@background-color-warning); }
 .btn.btn-error   { .btn-color(@background-color-error); }
 
 .btn-color(@bg) {
-  color: @text-color-selected;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  color: fade(@text-color-selected,70%);
   background-color: @bg;
   &:hover,
   &:focus {
@@ -59,5 +80,5 @@
 // Button Group -----------------------
 
 .btn-group > .btn {
-  border-color: hsla(0,0%,0%,.2);;
+  border-color: fade(@background-color-darken,80);
 }

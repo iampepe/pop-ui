@@ -7,7 +7,7 @@
 
 
 .tree-view-resizer {
-  border-right: 1px solid @base-border-color;
+  border-right: 0px solid @base-border-color;
 }
 
 .tree-view {
@@ -17,4 +17,9 @@
   .list-item.selected {
     color: @text-color-selected;
   }
+}
+
+.atom-dock-resize-handle {
+  background-color: fade(@background-color-darken,80%);
+  box-shadow: inset 2px 0 2px rgba(0,0,0,0.2);
 }
