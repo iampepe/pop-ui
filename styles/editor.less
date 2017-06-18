@@ -12,6 +12,10 @@ atom-text-editor[mini] {
   border-radius: @component-border-radius;
   background-color: @input-background-color;
 
+  .cursor {
+    color: @text-color-dark;
+  }
+
   &.is-focused {
     border-left: 3px solid @base-accent-color;
   }
@@ -26,8 +30,4 @@ atom-text-editor[mini] {
       background-color: @text-color-info;
     }
   }
-}
-
-input {
-  color: @text-color-dark;
 }
