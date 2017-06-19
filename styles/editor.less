@@ -35,3 +35,27 @@ atom-text-editor[mini] {
 input {
   color: @text-color-dark;
 }
+
+select {
+  &.form-control {
+    box-shadow: 0 0 transparent;
+    border-bottom: 2px solid @background-color-highlight !important;
+
+    &:hover, &:focus {
+      background-color: fade(@background-color-highlight, 50%) !important;
+    }
+
+    &:active,&:focus {
+      border-bottom: 2px solid @base-accent-color !important;
+    }
+  }
+
+  option {
+    background-color: @background-color-darken;
+  }
+}
+
+.active-syntax-settings {
+  height: 34px;
+  margin: 0 10px;
+}
