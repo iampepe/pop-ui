@@ -5,7 +5,8 @@
   "description": "Theme to match the GTK Pop theme for Linux",
   "keywords": [
     "ui",
-    "theme"
+    "theme",
+    "pop"
   ],
   "repository": "https://github.com/iampepe/pop-ui",
   "license": "MIT",
