@@ -38,14 +38,13 @@ input {
 
 select {
   &.form-control {
+    border-radius: 0;
     box-shadow: 0 0 transparent;
     border-bottom: 2px solid @background-color-highlight !important;
 
-    &:hover, &:focus {
-      background-color: fade(@background-color-highlight, 50%) !important;
-    }
-
-    &:active,&:focus {
+    &:hover, &:active, &:focus {
+    //   background-color: fade(@background-color-highlight, 50%) !important;
+    background-color: transparent!important;
       border-bottom: 2px solid @base-accent-color !important;
     }
   }
