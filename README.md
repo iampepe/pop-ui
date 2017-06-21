@@ -13,7 +13,7 @@ $ apm install pop-ui
 ```
 
 
-For the syntax theme, type:
+For the [syntax theme](https://atom.io/packages/pop-syntax), type:
 
 ```bash
 $ apm install pop-syntax
