@@ -1,4 +1,4 @@
-# Pop UI Theme 
+# Pop UI Theme
 
 pop-ui with [pop-syntax](https://atom.io/packages/pop-syntax) for Atom to match Pop GTK theme for Linux.
 
@@ -10,6 +10,13 @@ From the command line:
 
 ```bash
 $ apm install pop-ui
+```
+
+
+For the syntax theme, type:
+
+```bash
+$ apm install pop-syntax
 ```
 
 Alternatively, open Atom Preferences, select Themes > Search for `pop-ui`,
