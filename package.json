@@ -1,7 +1,7 @@
 {
   "name": "pop-ui",
   "theme": "ui",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Theme to match the GTK Pop theme for Linux",
   "keywords": [
     "ui",
