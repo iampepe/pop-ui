@@ -9,14 +9,47 @@
   color: @text-color-info;
   font-weight: bold;
   background-color: @button-background-color;
-  &:hover,
+  overflow: hidden;
+
+  // for ripple
+  &:after {
+    content: "";
+    background: @button-background-color-active;
+    display: flex;
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom:0;
+   left:0;
+   right:0;
+   border-radius:50%;
+   margin: 0 auto;
+   width:100px;
+   height:100px;
+   opacity: 0;
+   transition: all 0.6s ease;
+
+  }
+
+  &:active:after {
+    width:0;
+    height:0;
+    opacity: 1;
+    transition: 0s
+  }
+
+  &:hover {
+    color: @text-color-info;
+    background-color: @button-background-color-hover;
+  }
+
   &:focus {
     color: @text-color-info;
     background-color: @button-background-color-hover;
   }
   &:active {
     color: @text-color-info;
-    background-color: @button-background-color-active;
+    // background-color: @button-background-color-active;
   }
   &.selected {
     color: fade(@text-color-selected,80%);
@@ -24,12 +57,16 @@
 
     &:hover,
     &:focus {
+      color: fade(@text-color-selected,80%);
       background-color: lighten(@text-color-info,10%);
     }
   }
   &:focus,
   &:focus:active {
-    outline: none;
+      //dont need to be blue
+      // color: @text-color-info;
+      outline-offset: -4px;
+      outline: 2px solid @button-background-color-hover;
   }
 
   &.disabled{
@@ -62,8 +99,9 @@
   background-color: @bg;
   &:hover,
   &:focus {
-    color: @text-color-selected;
+    color: @text-color-selected !important;
     background-color: lighten(@bg, 4%);
+    outline-color: fade(@bg,20%)
   }
   &:active {
     background-color: darken(@bg, 4%);
@@ -74,6 +112,12 @@
   &.selected:focus,
   &.selected:hover {
     background-color: lighten(@bg, 8%);
+  }
+
+  &:focus,
+  &:focus:active {
+      outline-offset: -4px;
+      outline: 2px solid fade(@bg,20%);
   }
 }
 
