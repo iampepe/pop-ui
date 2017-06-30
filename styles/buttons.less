@@ -11,6 +11,7 @@
   background-color: @button-background-color;
   overflow: hidden;
   position:relative;
+  transition: background-color 0.4s ease;
 
   // for ripple
   &:after {
@@ -53,14 +54,17 @@
     // background-color: @button-background-color-active;
   }
   &.selected {
-    color: fade(@text-color-selected,80%);
-    background-color: @text-color-info;
-
-    &:hover,
-    &:focus {
-      color: fade(@text-color-selected,80%);
-      background-color: lighten(@text-color-info,10%);
-    }
+    .btn-color(@background-color-info);
+    // color: @text-color-selected;
+    // background-color: @button-background-color-hover;
+    // outline-offset: -4px;
+    // outline: 2px solid @button-background-color-hover;
+    //
+    // &:hover,
+    // &:focus {
+    //   color: fade(@text-color-selected,80%);
+    //   background-color: @button-background-color-active;
+    // }
   }
   &:focus,
   &:focus:active {
@@ -98,6 +102,10 @@
   box-shadow: 0 2px 2px rgba(0,0,0,0.2);
   color: fade(@text-color-selected,70%);
   background-color: @bg;
+
+  &:after {
+    background: fade(@text-color-highlight,50%);
+  }
   &:hover,
   &:focus {
     color: @text-color-selected !important;
@@ -109,10 +117,12 @@
   }
   &.selected {
     background-color: lighten(@bg, 4%);
+    outline-color: transparent;
   }
   &.selected:focus,
   &.selected:hover {
     background-color: lighten(@bg, 8%);
+
   }
 
   &:focus,
@@ -126,5 +136,6 @@
 // Button Group -----------------------
 
 .btn-group > .btn {
+  border-radius: 2px !important;
   border-color: fade(@background-color-darken,80);
 }
