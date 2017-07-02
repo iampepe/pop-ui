@@ -8,7 +8,8 @@
 .tab-bar {
   background-color: @tab-bar-background-color;
   border-bottom: 0px solid @base-border-color;
-  box-shadow: inset 0 2px 2px rgba(0,0,0,0.2);
+  // box-shadow: inset 0 2px 2px rgba(0,0,0,0.2);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), @tab-bar-background-color 4px);
 
   .tab {
     color: @text-color;
@@ -30,7 +31,8 @@
       max-width: none;
       background-color: @tab-bar-background-color;
       box-shadow: 0 0 transparent;
-      border-bottom: 2px solid transparent;
+      border-bottom: 2px solid @tab-bar-background-color;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.2), @tab-bar-background-color 4px);
 
     }
 
