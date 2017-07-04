@@ -2,7 +2,7 @@
 
 pop-ui with [pop-syntax](https://atom.io/packages/pop-syntax) for Atom to match Pop GTK theme for Linux.
 
-![A screenshot of your theme](https://raw.githubusercontent.com/iampepe/pop-ui/master/Screenshot.png)
+![A screenshot of your theme](https://raw.githubusercontent.com/iampepe/pop-ui/master/screenshot.png)
 
 ## Install
 
