@@ -13,15 +13,14 @@
 
         &.active {
           > a {
-            background-color: lighten(@background-color-active, 10%);
+            background-color: fade(lighten(@background-color-active, 5%),60%);
             border-left: 3px solid @base-accent-color;
-            box-shadow: inset 0 2px 2px rgba(0,0,0,0.2);
           }
         }
 
         > a {
           &:hover, &:focus {
-            background-color: lighten(@background-color-active, 5%);
+            background-color: fade(lighten(@background-color-active, 10%),60%);
           }
         }
       }
